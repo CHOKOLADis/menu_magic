@@ -80,7 +80,7 @@ header li.active a .text{
 header .indicator{
     position: absolute;
     top: -50%;
-    left: 0px;
+    left: 25px;
     width: 70px;
     height: 70px;
     background: rgb(67, 255, 67);
