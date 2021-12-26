@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <title>Magic menu</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li class="list active">
+                <a >
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a >
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a >
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <span class="text">message</span>
+                </a>
+            </li>
+            <li class="list">
+                <a >
+                    <span class="icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                    </span>
+                    <span class="text">photos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a >
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="text">settings</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </header>
+    <script>
+
+
+        const li = document.getElementsByClassName("list");
+
+        for (var i = 0 ; i < li.length; i++) {   
+            li[i].addEventListener('click' , activeClass , false ) ;
+        }
+
+        function activeClass(){
+            Object.keys(li).forEach(
+                function (key){
+                    li[key].classList.remove("active")
+                });
+            this.classList.add("active");
+        }
+        
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
